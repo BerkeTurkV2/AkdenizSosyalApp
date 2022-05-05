@@ -6,20 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register_page);
     }
-
     public void btnRegister(View view){
-        Intent intent = new Intent(MainActivity.this, RegisterPage.class);
+        Intent intent = new Intent(RegisterPage.this, LoginPage.class);
         startActivity(intent);
     }
     public void btnLogin(View view){
-        Intent intent = new Intent(MainActivity.this, LoginPage.class);
+        Intent intent = new Intent(RegisterPage.this, LoginPage.class);
         startActivity(intent);
     }
 }
