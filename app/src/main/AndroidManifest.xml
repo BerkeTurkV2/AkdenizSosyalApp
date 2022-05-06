@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Anaekrandeneme">
         <activity
+            android:name=".AppPage"
+            android:exported="false" />
+        <activity
             android:name=".LoginPage"
             android:exported="false" />
         <activity

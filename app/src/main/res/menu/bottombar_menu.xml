@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottombar_menu_event"
+        android:icon="@drawable/ic_event_img"
+        android:title="Etkinlikler"/>
+    <item
+        android:id="@+id/bottombar_menu_club"
+        android:icon="@drawable/ic_club_img"
+        android:title="Kulüpler"/>
+    <item
+        android:id="@+id/bottombar_menu_place"
+        android:icon="@drawable/ic_places_img"
+        android:title="Mekanlar"/>
+    <item
+        android:id="@+id/bottombar_menu_chat"
+        android:icon="@drawable/ic_chat_img"
+        android:title="Kampüs Chat"/>
+    <item
+        android:id="@+id/bottombar_menu_profile"
+        android:icon="@drawable/ic_person_img"
+        android:title="Profil"/>
+
+</menu>

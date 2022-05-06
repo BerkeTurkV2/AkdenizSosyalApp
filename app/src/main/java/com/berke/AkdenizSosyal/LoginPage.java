@@ -18,4 +18,8 @@ public class LoginPage extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void btnLogin(View view){
+        Intent intent = new Intent(LoginPage.this, AppPage.class);
+        startActivity(intent);
+    }
 }

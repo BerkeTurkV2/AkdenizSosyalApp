@@ -6,6 +6,8 @@
     <color name="text_baslik_background">#C4CDE0</color>
     <color name="button_color">#416CC7</color>
     <color name="top_color">#244CA1</color>
+    <color name="ItemSelectedColor">#060E5F</color>
+    <color name="ItemUnSelectedColor">#1A28BB</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
