@@ -2,10 +2,14 @@ package com.berke.AkdenizSosyal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -34,6 +38,9 @@ public class AppPage extends AppCompatActivity {
         chatFragment = new ChatPage();
         profileFragment = new ProfilePage();
 
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+
         setFragment(eventFragment);
 
         appBottomBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -61,6 +68,24 @@ public class AppPage extends AppCompatActivity {
             }
         });
     }
+
+    /*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.add_event, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.add_event) {
+            Intent myIntent = new Intent(AppPage.this, AddEventPage.class);
+            startActivity(myIntent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    */
 
     private void setFragment(Fragment fragment){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
