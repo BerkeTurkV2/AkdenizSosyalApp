@@ -26,11 +26,23 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Resim üzerine tıklayarak kapak resmi seçebilirsiniz."
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imgEventAddImage"
             android:layout_width="200dp"
             android:layout_height="240dp"
             android:layout_gravity="center"
+            android:onClick="imgEventAddImage"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/exp_event" />
 
@@ -47,13 +59,13 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Başlık :"
+                android:text="Başlık * :"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/editTxtEventTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -74,13 +86,13 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tarih :"
+                android:text="Tarih * :"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextDate2"
+                android:id="@+id/editTxtEventDate"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -101,13 +113,13 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yer :"
+                android:text="Yer * :"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/editTxtEventPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -134,7 +146,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/editTxtEventQuota"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_weight="1"
@@ -162,7 +174,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextMultiLine"
+                android:id="@+id/editTxtEventDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -173,11 +185,12 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnEventAddEvent"
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:background="@drawable/linearlayout_radius"
+            android:onClick="btnEventAddEvent"
             android:padding="12dp"
             android:text="Etkinlik Oluştur"
             android:textSize="14sp" />

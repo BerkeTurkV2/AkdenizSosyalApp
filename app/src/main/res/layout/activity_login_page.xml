@@ -47,7 +47,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTxtEmail"
+            android:id="@+id/editTxtLoginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -67,7 +67,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTxtPassword"
+            android:id="@+id/editTxtLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

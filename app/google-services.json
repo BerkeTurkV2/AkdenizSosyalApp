@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "536815425571",
+    "project_id": "akdeniz-sosyal-c1555",
+    "storage_bucket": "akdeniz-sosyal-c1555.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536815425571:android:107b78f17d4f679dea7996",
+        "android_client_info": {
+          "package_name": "com.berke.AkdenizSosyal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536815425571-68dkb8nii621i87sqqr02sed9n4uk6p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARxulyEAM0XzdaMJ2v6DmCzlImNZiW_v4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536815425571-68dkb8nii621i87sqqr02sed9n4uk6p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
