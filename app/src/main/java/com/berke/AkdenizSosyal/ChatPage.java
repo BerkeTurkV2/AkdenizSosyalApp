@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+// 16/05 başlanılacak
 public class ChatPage extends Fragment {
 
     private ViewPager mViewPager;

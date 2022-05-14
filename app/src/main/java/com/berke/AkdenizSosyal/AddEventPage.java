@@ -68,6 +68,8 @@ public class AddEventPage extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mFireStore = FirebaseFirestore.getInstance();
 
+        // Galeriden resim çekme ve değiştirme kısmı
+
         ActivityResultLauncher<String> selectImage = registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
             public void onActivityResult(Uri result) {
@@ -90,6 +92,8 @@ public class AddEventPage extends AppCompatActivity {
         eventQuota = editTxtEventQuota.getText().toString();
         eventDescription = editTextEventDescription.getText().toString();
 
+        // kontrol bloğu
+
         if(!TextUtils.isEmpty(eventTitle)){
             if(!TextUtils.isEmpty(eventDate)){
                 if(!TextUtils.isEmpty(eventPlace)){
@@ -101,6 +105,7 @@ public class AddEventPage extends AppCompatActivity {
                         mFireStore.collection("Events").document(mFirebaseUser.getUid()).set(mEvent).addOnCompleteListener(AddEventPage.this, new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
+                                // Sayfa geçiş kısmı
                                 if(task.isSuccessful()){
                                     Toast.makeText(AddEventPage.this,"Etkinlik eklendi.",Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(AddEventPage.this, EventPage.class);

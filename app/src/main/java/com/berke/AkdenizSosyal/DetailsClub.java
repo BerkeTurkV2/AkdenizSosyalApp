@@ -20,12 +20,14 @@ public class DetailsClub extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_club);
 
+        //init
         txtClubNameDesc = (TextView) findViewById(R.id.txtClubNameDesc);
         txtClubType = (TextView) findViewById(R.id.txtClubType);
         txtOpeningDate = (TextView) findViewById(R.id.txtOpeningDate);
         txtAdvisor = (TextView) findViewById(R.id.txtAdvisor);
         txtClubDesc = (TextView) findViewById(R.id.txtClubDesc);
 
+        // içerikleri çekme
         getInt = getIntent();
         ClubNameDesc = getInt.getStringExtra("ClubName");
         ClubType = getInt.getStringExtra("ClubType");

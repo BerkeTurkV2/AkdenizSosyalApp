@@ -22,6 +22,7 @@ public class PlaceAdapter extends ArrayAdapter<String> {
     private TextView placeName, placeType;
     private ImageView placeImage;
 
+    // Constructor
    public PlaceAdapter(String[] PlaceName, String[] PlaceType, int[] PlaceImage, Context context){
        super(context, R.layout.place_item, PlaceName);
 
@@ -37,10 +38,12 @@ public class PlaceAdapter extends ArrayAdapter<String> {
        View view = LayoutInflater.from(context).inflate(R.layout.place_item,null);
 
        if(view != null){
+           // init
            placeName = view.findViewById(R.id.place_item_placeName);
            placeType = view.findViewById(R.id.place_item_placeType);
            placeImage = view.findViewById(R.id.place_item_img);
 
+           // Position aracılıgıyla index numarasına göre yeni degerlerin atanması
            placeName.setText(PlaceName[position]);
            placeType.setText(PlaceType[position]);
            placeImage.setBackgroundResource(PlaceImage[position]);

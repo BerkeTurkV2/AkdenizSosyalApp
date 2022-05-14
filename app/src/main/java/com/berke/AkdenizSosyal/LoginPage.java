@@ -46,6 +46,7 @@ public class LoginPage extends AppCompatActivity {
         txtEmail = editTxtEmail.getText().toString();
         txtPassword = editTxtPassword.getText().toString();
 
+        // kontol bloğu
         if(!TextUtils.isEmpty(txtEmail) && !TextUtils.isEmpty(txtPassword)){
             mAuth.signInWithEmailAndPassword(txtEmail,txtPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override

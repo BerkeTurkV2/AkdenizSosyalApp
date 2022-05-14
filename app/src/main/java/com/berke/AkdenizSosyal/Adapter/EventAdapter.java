@@ -38,6 +38,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
 
     @Override
     public void onBindViewHolder(@NonNull EventHolder holder, int position) {
+        // Etkinlik zorunlu kısımları (Holder kullanımı)
         mEvent = mEventList.get(position);
         holder.eventTitle.setText("Etkinlik : " + mEvent.getEventTitle());
         holder.eventDate.setText("Tarih : " + mEvent.getEventDate());
@@ -61,7 +62,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
 
         public EventHolder(@NonNull View itemView) {
             super(itemView);
-
+            // init
             eventTitle = itemView.findViewById(R.id.event_item_txtTitle);
             eventDate = itemView.findViewById(R.id.event_item_txtDate);
             eventPlace = itemView.findViewById(R.id.event_item_txtPlace);

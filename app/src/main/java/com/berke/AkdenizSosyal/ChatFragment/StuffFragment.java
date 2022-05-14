@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.berke.AkdenizSosyal.R;
 
-
+// chat kısmı için oluşturuldu.
 public class StuffFragment extends Fragment {
 
 
