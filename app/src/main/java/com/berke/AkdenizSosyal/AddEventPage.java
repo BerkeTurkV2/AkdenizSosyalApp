@@ -23,14 +23,29 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.berke.AkdenizSosyal.Model.Event;
+import com.berke.AkdenizSosyal.Model.User;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.io.ByteArrayOutputStream;
 
 public class AddEventPage extends AppCompatActivity {
 
+    private Event mEvent;
+
     private EditText editTxtEventTitle, editTxtEventDate, editTxtEventPlace, editTxtEventQuota, editTextEventDescription;
     private Button btnEventAddEvent;
     private ImageView imgEventAddImage;
-    private String eventTitle, eventDate, eventPlace;
+    private String eventTitle, eventDate, eventPlace, eventQuota, eventDescription, eventImage;
+
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore mFireStore;
+    private FirebaseUser mFirebaseUser;
 
     ActivityResultLauncher<Intent> activityResultLauncher;
 
@@ -49,6 +64,9 @@ public class AddEventPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event_page);
         init();
+
+        mAuth = FirebaseAuth.getInstance();
+        mFireStore = FirebaseFirestore.getInstance();
 
         ActivityResultLauncher<String> selectImage = registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
@@ -69,12 +87,29 @@ public class AddEventPage extends AppCompatActivity {
         eventTitle = editTxtEventTitle.getText().toString();
         eventDate = editTxtEventDate.getText().toString();
         eventPlace = editTxtEventPlace.getText().toString();
+        eventQuota = editTxtEventQuota.getText().toString();
+        eventDescription = editTextEventDescription.getText().toString();
 
         if(!TextUtils.isEmpty(eventTitle)){
             if(!TextUtils.isEmpty(eventDate)){
                 if(!TextUtils.isEmpty(eventPlace)){
 
-                    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                    mFirebaseUser = mAuth.getCurrentUser();
+
+                    if(mFirebaseUser != null ) {
+                        mEvent = new Event(eventTitle,eventDate,eventPlace,eventQuota,eventDescription,mFirebaseUser.getUid());
+                        mFireStore.collection("Events").document(mFirebaseUser.getUid()).set(mEvent).addOnCompleteListener(AddEventPage.this, new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(AddEventPage.this,"Etkinlik eklendi.",Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(AddEventPage.this, EventPage.class);
+                                    startActivity(intent);
+                                }else
+                                    Toast.makeText(AddEventPage.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
 
 
                 }else
