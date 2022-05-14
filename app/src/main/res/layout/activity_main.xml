@@ -75,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum in sem et iaculis. "
                         android:textSize="10sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -126,7 +126,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum in sem et iaculis. "
                         android:textSize="10sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -177,7 +177,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum in sem et iaculis. "
                         android:textSize="10sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -227,7 +227,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum in sem et iaculis. "
                         android:textSize="10sp"
                         android:textStyle="bold" />
                 </LinearLayout>

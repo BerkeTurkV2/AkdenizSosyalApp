@@ -1,25 +1,23 @@
-package com.berke.AkdenizSosyal;
+package com.berke.AkdenizSosyal.ChatFragment;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.berke.AkdenizSosyal.R;
 
-public class ChatPage extends Fragment {
 
-    private ViewPager mViewPager;
+public class StuffFragment extends Fragment {
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_chat_page, container, false);
-        mViewPager = (ViewPager)rootView.findViewById(R.id.chat_page_viewPager);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_stuff, container, false);
     }
 }
